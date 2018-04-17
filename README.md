@@ -26,11 +26,11 @@ ruby index.rb
     Section: Creer le script Scrapping de donnees           
     Slack => **@Lovarazafimah**,             
     Github => **lovatianamahefason**
-2.   Ando:           
+3.   Ando:           
     Section: Creer le script qui permet d'envoyer l'email               
     Slack => **@Ando**,              
     Github => **andriamalala5056**
-2.   Andry:              
+4.   Andry:              
     Section: Creer le script qui permet de creer un bot pour twitter             
     Slack => **@Andry**,                 
     Github => **andryhajanirina**
