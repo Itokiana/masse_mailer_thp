@@ -4,7 +4,7 @@
 ```shell
 bundle install
 ```
-- Puis, créer un fichier et configurer un fichier **.env**, puis le mettre à la racine du projet:
+- Puis, créer et configurer un fichier **.env**, puis le mettre à la racine du projet:
 ```shell
 USER_GMAIL=exemple@gmail.com
 PASSWORD_GMAIL=motdepasse
@@ -19,26 +19,26 @@ ruby index.rb
 ```
 ## L'équipe Madagascar
 1.   Itokiana :
-    Section: Regrouper les trois scripts, creer le fichier **Gemfile**,**.env**, creer le point d'acces **index.rb** qui permet de lancer l'application.
-    Slack => **@itokiana73**, 
+    Section: Regrouper les trois scripts, creer le fichier **Gemfile**,**.env**, creer le point d'acces **index.rb** qui permet de lancer l'application.            
+    Slack => **@itokiana73**,           
     Github => **itokiana**
 2.   Lova: 
-    Section: Creer le script Scrapping de donnees
-    Slack => **@Lovarazafimah**, 
+    Section: Creer le script Scrapping de donnees           
+    Slack => **@Lovarazafimah**,             
     Github => **lovatianamahefason**
 2.   Ando: 
-    Section: Creer le script qui permet d'envoyer l'email
-    Slack => **@Ando**, 
+    Section: Creer le script qui permet d'envoyer l'email               
+    Slack => **@Ando**,              
     Github => **andriamalala5056**
 2.   Andry: 
-    Section: Creer le script qui permet de creer un bot pour twitter 
-    Slack => **@Andry**, 
+    Section: Creer le script qui permet de creer un bot pour twitter             
+    Slack => **@Andry**,                 
     Github => **andryhajanirina**
 
 ## Arborescence du projet
 ```shell
 masse_mailer
-	|- database
+    |- database
     |---|- townhalls.json
     |- mailer
     |---|- townhalls_mailer.rb
