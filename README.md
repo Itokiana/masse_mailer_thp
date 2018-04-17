@@ -52,12 +52,12 @@ masse_mailer
 bundle install
 ```
 Les gems utilisés sont:
-    - gmail
-    - json
-    - nokogeri
-    - pry
-    - dotenv
-    - twitter
+    - gmail                     
+    - json                      
+    - nokogeri                  
+    - pry               
+    - dotenv                
+    - twitter                       
 2. Puis, créer et configurer un fichier **.env**, puis le mettre à la racine du projet:
 ```shell
 USER_GMAIL=exemple@gmail.com
