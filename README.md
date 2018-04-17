@@ -19,18 +19,22 @@ ruby index.rb
 ```
 ## L'équipe Madagascar
 1.   Itokiana :
+    -----------         
     Section: Regrouper les trois scripts, creer le fichier **Gemfile**,**.env**, creer le point d'acces **index.rb** qui permet de lancer l'application.            
     Slack => **@itokiana73**,           
     Github => **itokiana**
-2.   Lova: 
+2.   Lova:           
+    -------
     Section: Creer le script Scrapping de donnees           
     Slack => **@Lovarazafimah**,             
     Github => **lovatianamahefason**
-2.   Ando: 
+2.   Ando:           
+    ------
     Section: Creer le script qui permet d'envoyer l'email               
     Slack => **@Ando**,              
     Github => **andriamalala5056**
-2.   Andry: 
+2.   Andry:              
+    -------
     Section: Creer le script qui permet de creer un bot pour twitter             
     Slack => **@Andry**,                 
     Github => **andryhajanirina**
