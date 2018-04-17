@@ -51,7 +51,7 @@ masse_mailer
 ```shell
 bundle install
 ```
-Les gems utilisés sont:
+Les gems utilisés sont:                 
     - gmail                     
     - json                      
     - nokogeri                  
