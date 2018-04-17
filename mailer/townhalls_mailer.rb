@@ -4,7 +4,7 @@ require 'rubygems'
 
 def send_email_to_line(adresse, name)
     # Puts the sender email adress and password
-    gmail = Gmail.connect('test.sayna@gmail.com','administrator2018')
+    gmail = Gmail.connect(USER_GMAIL,PASSWORD_GMAIL)
     email = gmail.compose do
     to "#{adresse}"
     # This is the content of the message
@@ -16,7 +16,7 @@ def send_email_to_line(adresse, name)
                 Bonjour,
             </p>
             <p>
-                Je m'appelle Théophile Coutaind, je suis élève à The Hacking Project,
+                Je m'appelle Jean Ducobu, je suis élève à The Hacking Project,
                 une formation au code gratuite, sans locaux, sans sélection, sans restriction géographique.
             </p> 
             <p>
@@ -29,7 +29,7 @@ def send_email_to_line(adresse, name)
                 Déjà 300 personnes sont passées par The Hacking Project. Est-ce que la mairie de <b>#{name}</b> veut changer le monde avec nous ?
             </p>
             
-            <p>Théophile Coutaind, co-fondateur de The Hacking Project pourra répondre à toutes vos questions : 06.95.46.60.80</p>"
+            <p>Charles, co-fondateur de The Hacking Project pourra répondre à toutes vos questions : 06.95.46.60.80</p>"
       end
     end
 email.deliver!
@@ -40,13 +40,11 @@ end
 
 def go_through_all_line
     
-    file = File.read('../database/townhalls.json')
+    file = File.read('./database/townhalls.json')
     datas = JSON.parse(file)
 
-        # This code run the json file
-        for i in 0...datas.length 
-            send_email_to_line(datas[i]['email'],datas[i]['name'])
-        end
+    # This code run the json file
+    for i in 0...datas.length 
+        send_email_to_line(datas[i]['email'],datas[i]['name'])
     end
-
-go_through_all_line
+end

@@ -3,16 +3,16 @@ require 'json'
 
 # quelques lignes qui enregistrent les clés d'APIs
 CLIENT = Twitter::REST::Client.new do |config|
-  config.consumer_key        = "CZ2FBujHYfsVrewGdhaj3w6FL"
-  config.consumer_secret     = "lqZY0asvuPvBrHYGGMrPbdItWvHqj7agCCgqIC9KVU6JNRDNPP"
-  config.access_token        = "986198426680483841-BoEr5IpUX6HoiSdoB2mCsgU7MvT0go9"
-  config.access_token_secret = "Qx9maBrtoqIiqm5pPWbLa5e53ocn4DZGxxh4xIfHl4OGT"
+  config.consumer_key        = CONSUMER_KEY
+  config.consumer_secret     = CONSUMER_SECRET
+  config.access_token        = ACCESS_TOKEN
+  config.access_token_secret = ACCESS_TOKEN_SECRET
 end
 
 #Méthode pour follower les utilisateurs concernés par les tweets sur la liste des communes
 def follow_user
     #Lecture du fichier .json
-    file = File.read('fichier.json')
+    file = File.read('./database/townhalls.json')
 
     #Parser le fichier json
     data_hash = JSON.parse(file)
@@ -27,12 +27,13 @@ def follow_user
         CLIENT.search("@#{handle['name']}").take(1).each do |tweet|
             tab_users << tweet.user.screen_name
             data_hash[i]['handle_twitter'] = '@' + tweet.user.screen_name
+            puts "Mairie #{data_hash[i]['name']} => #{tweet.user.screen_name}\npublication => #{tweet.text}"
         end
         i += 1
     end
 
     #Ecriture du fichir json
-    File.open("fichier.json","w") do |f|
+    File.open("./database/townhalls.json","w") do |f|
         f.write(data_hash.to_json)
     end
 
@@ -42,5 +43,3 @@ def follow_user
         CLIENT.follow(users)
     end
 end
-
-follow_user

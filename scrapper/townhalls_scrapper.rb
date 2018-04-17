@@ -43,35 +43,30 @@ def get_email(dpt, url)
     mairies
 end
 
-t1 = get_email("VAR","http://www.annuaire-des-mairies.com/var.html")
-sleep 10
-t2 = get_email("VAUCLUSE","http://www.annuaire-des-mairies.com/vaucluse.html")
-sleep 10
-t3 = get_email("DOUBS","http://www.annuaire-des-mairies.com/doubs.html")
 
-tab = []
 
-t1.each do |x|
-    tab.push(x)
+def save_to_json
+    t1 = get_email("VAR","http://www.annuaire-des-mairies.com/var.html")
+    t2 = get_email("VAUCLUSE","http://www.annuaire-des-mairies.com/vaucluse.html")
+    t3 = get_email("DOUBS","http://www.annuaire-des-mairies.com/doubs.html")
+    
+    tab = []
+    t1.each do |x|
+        tab.push(x)
+    end
+    t2.each do |x|
+        tab.push(x)
+    end
+    t3.each do |x|
+        tab.push(x)
+    end
+    
+    
+    File.open("./database/townhalls.json","a") do |f|
+        f.write(tab.to_json)
+    end
+    puts "Save data to townhalls.json OK"
 end
 
 
-t2.each do |x|
-    tab.push(x)
-end
-
-
-
-t3.each do |x|
-    tab.push(x)
-end
-
-
-File.open("../database/townhalls.json","a") do |f|
-    f.write(tab.to_json)
-end
-
-puts "Save to email.json"
-
-#column_names = t.first.keys
 
