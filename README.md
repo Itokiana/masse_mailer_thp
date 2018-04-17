@@ -73,6 +73,6 @@ ruby index.rb
 ```
 
 ## Rendu
-- **Email envoyé:** 
-- **Nombre de mairies touchées:**
+- **Email envoyé:** 454
+- **Nombre de mairies touchées:** 454
 - **handle Twitter utilisé:**
